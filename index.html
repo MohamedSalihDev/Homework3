@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Random Password Generator</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <div>
+            <span id=output></span>
+            <button id="generateButton">Generate Password</button>
+        </div>
+
+    </div>
+
+    
+    
+    
+    
+    <script type="text/javascript">
+    const buttonPush = document.getElementById("generateButton")
+    buttonPush.addEventListener("click", function () {
+        const numberofCharacters = prompt("How many characters would you like to use in your password? Please pick a number between 1 and 128.");
+        const includeUpperCaseLetters = confirm("Would you like to use uppercase letters?");
+        const includeLowerCaseLetters = confirm ("Would you like to use lowercase letters?");
+        const includeNumbers = confirm("Would you like to include numbers?");
+        const includeSymbols = confirm("Would you like to include symbols?");
+var UpperCaseLettersArray = ["A", "B","C","D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X","Y", "Z"];
+var LowerCaseLettersArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var NumbersArray = [ "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" ];
+var SymbolsArray =["!", "@", "#", "$", "%", "^", "&", "*"];
+ var concatanatedLowerCaseUpperCaseArray = (LowerCaseLettersArray).concat(UpperCaseLettersArray)
+ var concatanatedNumbersUpperCaseArray= (NumbersArray).concat(UpperCaseLettersArray)
+ var concatanatedSymbolsUpperCaseArray= (SymbolsArray).concat(UpperCaseLettersArray)
+ var concatanatedNumbersLowerCaseUpperCaseArray = (NumbersArray).concat(LowerCaseLettersArray).concat(UpperCaseLettersArray)
+ var concatanatedSymbolsLowerCaseAndUpperCaseArray = (SymbolsArray).concat(LowerCaseLettersArray).concat(UpperCaseLettersArray)
+ var concatanatedSymbolsNumbersLowerCaseUpperCaseArray = (SymbolsArray).concat(NumbersArray).concat(UpperCaseLettersArray).concat(UpperCaseLettersArray)
+ var concatanatedNumbersLowerCaseArray =(NumbersArray).concat(LowerCaseLettersArray)
+ var concatanatedSymbolsLowerCaseArray =(SymbolsArray).concat(LowerCaseLettersArray)
+ var concatanatedSymbolsNumbersLowerCaseArray = (SymbolsArray).concat(NumbersArray).concat(NumbersArray)
+ var concatanatedSymbolsNumbersArray = (SymbolsArray).concat(NumbersArray)
+
+
+ const OneRandomUpperCase = {
+function RandomUpperCaseLetter()  {return (UpperCaseLettersArray).indexOf(Math.floor(Math.Random) * UpperCaseLettersArray.length);}
+ }
+const; OneRandomLowerCase ={
+function RandomLowerCaseLetter() { return (LowerCaseLettersArray).indexOf(Math.floor(Math.Random) * LowerCaseLettersArray.length);}
+};
+const OneRandomNumber ={
+function RandomNumber () { return (NumbersArray).indexOf(Math.floor(Math.Random)* NumbersArray.length);}
+};
+const OneRandomUpperSymbol ={
+ function RandomSymbol () {return (SymbolsArray).indexOf (Math.floor(Math.Random) * SymbolsArray.length);}
+};
+const OneRandomLowerCaseUpperCase ={
+function RandomLowerCaseUpperCase () {return (concatanatedLowerCaseUpperCaseArray).indexOf (Math.floor(Math.Random) * concatanatedLowerCaseUpperCaseArray.length);}
+};
+const OneRandomNumberUpperCase = {
+function RandomNumbersUpperCase () {return (concatanatedNumbersUpperCaseArray).indexOf (Math.floor(Math.Random) * concatanatedNumbersUpperCaseArray.length);}
+};
+const OneRandomSymbolUpperCase ={
+function RandomSymbolsUpperCase () {return (concatanatedSymbolsUpperCaseArray).indexOf (Math.floor(Math.Random) * concatanatedSymbolsUpperCaseArray.length);}
+};
+const OneRandomNumberLowerCase ={
+function RandomNumbersLowerCaseUpperCase () {return (oncatanatedNumbersLowerCaseUpperCaseArray).indexOf (Math.floor(Math.Random) * concatanatedNumbersLowerCaseUpperCaseArray.length);}
+};
+const OneRandomSymbolLowerCase ={
+function RandomSymbolsLowerCaseUpperCase () {return (concatanatedSymbolsLowerCaseAndUpperCaseArray).indexOf (Math.floor(Math.Random) * concatanatedSymbolsLowerCaseAndUpperCaseArray.length);}
+};
+const OneRandomSymbolNumberLowerCaseUpperCase = {
+function RandomSymbolsNumbersLowerCaseUpperCase () {return (concatanatedSymbolsNumbersLowerCaseUpperCaseArray).indexOf (Math.floor(Math.Random) * concatanatedSymbolsNumbersLowerCaseUpperCaseArray.length);}
+};
+const OneRandomNumberLowerCase = {
+function RandomNumbersLowerCase () {return (concatanatedNumbersLowerCaseArray).indexOf (Math.floor(Math.Random) * concatanatedNumbersLowerCaseArray.length);}
+};
+const OneRandomSymbolLowerCase ={
+function RandomSymbolsLowerCase () {return (concatanatedSymbolsLowerCaseArray).indexOf (Math.floor(Math.Random) * concatanatedSymbolsLowerCaseArray.length);}
+};
+const OneRandomNumberLowerCase = {
+function RandomSymbolsNumbersLowerCase () {return (concatanatedSymbolsNumbersLowerCaseArray).indexOf (Math.floor(Math.Random) * concatanatedSymbolsNumbersLowerCaseArray.length);}
+};
+const OneRandomSymbolNumber ={
+function RandomSymbolsNumbers () {return (concatanatedSymbolsNumbersArray).indexOf (Math.floor(Math.Random) * concatanatedSymbolsNumbersArray.length);}
+};
+
+
+
+for (i=0, i = numberofCharacters, i++){
+    var output = [i];
+    var designatedPassword = output.join("")
+    
+    if (includeUpperCaseLetters){ 
+    output.push(OneRandomLowerCaseUpperCase)  
+    var designatedPassword = output.join("")
+    return "Your password is  +designatedPassword+";
+}
+    else if (includeLowerCaseLetters && includeUpperCaseLetters){
+    output.push(OneRandomLowerCaseUpperCase) 
+    var designatedPassword = output.join("")
+    return "Your password is  + designatedPassword +";
+}
+    else if (includeNumbers && includeUpperCaseLetters){
+    output.push(OneRandomNumberUpperCase) 
+    var designatedPassword = output.join("")
+    return "Your password is  +designatedPassword+";
+}
+    else if (includeSymbols && includeUpperCaseLetters){
+    output.push(OneRandomNumberUpperCase) 
+    var designatedPassword = output.join("")
+    return "Your password is  +designatedPassword+";
+    }
+    else if (includeNumbers && includeLowerCaseLetters && includeUpperCaseLetter) {
+    output.push(OneRandomSymbolNumberLowerCaseUpperCase) 
+    var designatedPassword = output.join("")
+    return "Your password is  +designatedPassword+";}
+    else if (includeSymbols && includeLowerCaseLetters && includeUpperCaseLetters){;
+    output.push(OneRandomSymbolNumberLowerCaseUpperCase)  
+    var designatedPassword = output.join("")
+    return "Your password is  + designatedPassword + ";
+    }
+   else if (includeSymbols && includeNumbers && includeLowerCaseLetters && includeUpperCaseLetters){
+    output.push(OneRandomSymbolNumberLowerCaseUpperCase) 
+    var designatedPassword = output.join("")
+    return "Your password is  +designatedPassword+";
+}
+   else if (includeLowerCaseLetters){
+    output.push(OneRandomLowerCase) 
+    var designatedPassword = output.join("")
+    return "Your password is  +designatedPassword+";
+}
+   else if (includeNumbers && includeLowerCaseLetters){
+    output.push(OneRandomNumberLowerCase) 
+    var designatedPassword = output.join("")
+    return "Your password is  +designatedPassword+";
+}
+   else if (includeSymbols && includeLowerCaseLetters){
+    output.push(OneRandomSymbolLowerCase)  
+    var designatedPassword = output.join("")
+    return "Your password is  +designatedPassword+";
+}
+   else if (includeSymbols && includeNumbers && includeLowerCaseLetters){
+    output.push(OneRandomSymbolNumberLowerCaseUpperCase) 
+    var designatedPassword = output.join("")
+    return "Your password is  +designatedPassword+";
+}
+   else if (includeNumbers){
+    output.push(OneRandomNumber)  
+    var designatedPassword = output.join("")
+    return "Your password is  +designatedPassword+";
+}
+   else if (includeSymbols && includeNumbers){;
+    output.push(OneRandomSymbolNumber)  
+    var designatedPassword = output.join("")
+    return "Your password is  +designatedPassword+";
+}
+   else if (includeSymbols){;
+    output.push(OneRandomSymbol) 
+    var designatedPassword = output.join("")
+    return "Your password is  +designatedPassword+";
+} 
+})
+
+    
+
+
+
+console.log (includeSymbols)
+
+getElementById("output").innerText = "Your password is  +designatedPassword+"
+
+
+
+   
+   
+   
+   </script>
+            
+
+
+
+
+
+
+
+    
+</body>
+
+</html>
